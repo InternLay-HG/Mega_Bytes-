@@ -27,24 +27,28 @@ The system will serve as a comprehensive platform integrating with hospital mana
 - Reporting and analytics
 
 ### Frontend(Web)
--HTML
--CSS
--JAVASCRIPT
--REACT
+HTML
+<br>
+CSS
+<br>
+JAVASCRIPT
+<br>
+REACT
 
 ### Backend(Web)
--Node.js
--Express.js
+Node.js <br>
+Express.js
 
 ### Databse
--Mongo db
--My SQL
+Mongo db
+<br>
+My SQL
 
 ### Ai Ml
--Data models->
-               #Lab results
-               #Patient info
-               #Appointments
+Data models->
+               #Lab results <br>
+               #Patient info <br>
+               #Appointments <br>
 
 ### User Classes and Characteristics
 - *Physicians*: Input and access patient data.
