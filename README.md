@@ -125,19 +125,3 @@ The system will serve as a comprehensive platform integrating with hospital mana
 
 ### Data Dictionary
 (Detailed description of each data entity and its attributes)
-
-## Appendices
-
-### Assumptions and Dependencies
-- Availability of secure cloud infrastructure or on-premises servers.
-- Compliance with healthcare data protection laws.
-- Integration capabilities with existing systems.
-
-### Acronyms and Abbreviations
-(List of all acronyms and abbreviations used in the document)
-
-## Contributing
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
