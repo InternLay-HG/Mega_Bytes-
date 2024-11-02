@@ -45,10 +45,12 @@ Mongo db
 My SQL
 
 ### Ai Ml
-Data models->
-               #Lab results <br>
-               #Patient info <br>
-               #Appointments <br>
+Tensor<br>
+Keras<br>
+Pandas<br>
+Numpy<br>
+Matplotlib<br>
+Scikit-Learn
 
 ### User Classes and Characteristics
 - *Physicians*: Input and access patient data.
