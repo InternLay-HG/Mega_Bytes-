@@ -3,27 +3,6 @@
 ## Overview
 The Medical Record and Help System is designed to streamline patient information management and provide efficient assistance to healthcare providers. This comprehensive platform will integrate with existing hospital management systems and medical devices, ensuring data security and compliance with healthcare regulations.
 
-## Table of Contents
-1. [Introduction](#introduction)
-   - [Purpose](#purpose)
-   - [Scope](#scope)
-   - [Definitions and Acronyms](#definitions-and-acronyms)
-2. [Overall Description](#overall-description)
-   - [Product Perspective](#product-perspective)
-   - [Product Features](#product-features)
-   - [User Classes and Characteristics](#user-classes-and-characteristics)
-3. [Specific Requirements](#specific-requirements)
-   - [Functional Requirements](#functional-requirements)
-   - [Non-Functional Requirements](#non-functional-requirements)
-4. [System Interfaces](#system-interfaces)
-   - [User Interfaces](#user-interfaces)
-   - [Hardware Interfaces](#hardware-interfaces)
-   - [Software Interfaces](#software-interfaces)
-5. [Data Requirements](#data-requirements)
-   - [Logical Data Model](#logical-data-model)
-   - [Data Dictionary](#data-dictionary)
-6. [Appendices](#appendices)
-
 ## Introduction
 
 ### Purpose
@@ -31,14 +10,6 @@ This document outlines the software requirements for a Medical Record and Help S
 
 ### Scope
 The system includes features for patient record management, appointment scheduling, medical assistance information, and regulatory compliance.
-
-### Definitions and Acronyms
-- *SRS*: Software Requirements Specification
-- *EHR*: Electronic Health Record
-- *HIPAA*: Health Insurance Portability and Accountability Act
-- *HL7*: Health Level Seven (data exchange standard)
-- *UI*: User Interface
-- *API*: Application Programming Interface
 
 ## Overall Description
 
@@ -54,6 +25,26 @@ The system will serve as a comprehensive platform integrating with hospital mana
 - Medical knowledge base and assistance
 - Secure messaging
 - Reporting and analytics
+
+### Frontend(Web)
+-HTML
+-CSS
+-JAVASCRIPT
+-REACT
+
+### Backend(Web)
+-Node.js
+-Express.js
+
+### Databse
+-Mongo db
+-My SQL
+
+### Ai Ml
+-Data models->
+               #Lab results
+               #Patient info
+               #Appointments
 
 ### User Classes and Characteristics
 - *Physicians*: Input and access patient data.
