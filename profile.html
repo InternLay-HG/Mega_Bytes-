@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./assets/account-image.jpg') no-repeat center center fixed; /* Add your image path */
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            width: 400px; /* Fixed width for better layout */
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        .input-group {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .input-group i {
+            margin-right: 10px;
+            color: #007BFF; /* Icon color */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="radio"] {
+            margin-left: 10px;
+        }
+        button {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            background: rgba(238, 238, 238, 0.9);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Profile</h2>
+        <p>Please fill out the information below to create your profile.</p>
+        <form id="userProfileForm" action="<%= profileAction %>" method="post">
+            <!-- Personal Information -->
+            <h3>Personal Information</h3>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="full_name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-calendar"></i>
+                <input type="date" name="dob" placeholder="Date of Birth" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" name="address" placeholder="Home Address" required>
+            </div>
+
+            <!-- Gender Selection -->
+            <div class="input-group gender-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" name="gender" value="male" id="male" required>
+                    <label for="male">Male</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="gender" value="female" id="female" required>
+                    <label for="female">Female</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="gender" value="other" id="other" required>
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <!-- Marital Status -->
+            <div class="input-group">
+                <label for="marital-status">Marital Status:</label>
+                <select id="marital-status" name="marital_status" required>
+                    <option value="" disabled selected>Select status</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                </select>
+            </div>
+
+            <!-- Account Creation -->
+            <h3>Account Creation</h3>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Create Password" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+
+            <!-- Emergency Contact Information -->
+            <h3>Emergency Contact</h3>
+            <div class="input-group">
+                <i class="fas fa-user-friends"></i>
+                <input type="text" name="emergency_contact_name" placeholder="Emergency Contact Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" name="emergency_contact_phone" placeholder="Emergency Contact Phone" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-venus-mars"></i>
+                <input type="text" name="relationship" placeholder="Relationship to Patient" required>
+            </div>
+
+            <!-- Medical Information -->
+            <h3>Medical Information</h3>
+            <div class="input-group">
+                <i class="fas fa-heartbeat"></i>
+                <input type="text" name="medical_conditions" placeholder="Existing Medical Conditions (if any)">
+            </div>
+            <div class="input-group">
+                <i class="fas fa-pills"></i>
+                <input type="text" name="current_medications" placeholder="Current Medications (if any)">
+            </div>
+            <div class="input-group">
+                <i class="fas fa-allergies"></i>
+                <input type="text" name="allergies" placeholder="Known Allergies">
+            </div>
+
+            <!-- Insurance Information -->
+            <h3>Insurance Information</h3>
+            <div class="input-group">
+                <i class="fas fa-id-card"></i>
+                <input type="text" name="insurance_provider" placeholder="Insurance Provider" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-id-badge"></i>
+                <input type="text" name="policy_number" placeholder="Insurance Policy Number" required>
+            </div>
+
+            <!-- Terms and Submission -->
+            <div class="checkbox-group">
+                <input type="checkbox" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms & Conditions</a></label>
+            </div>
+            <button type="submit">Create Profile</button>
+        </form>
+
+        <!-- Result Display -->
+        <div class="result" id="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        document.getElementById('userProfileForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(this);
+            let resultHTML = '<h3>Submitted Information:</h3><ul>';
+
+            // Iterate over form data
+            for (let [key, value] of formData.entries()) {
+                resultHTML += `<li><strong>${key}:</strong> ${value}</li>`;
+            }
+            resultHTML += '</ul>';
+
+            // Display the result
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = resultHTML;
+            resultDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

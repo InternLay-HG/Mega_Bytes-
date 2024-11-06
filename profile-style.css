@@ -1,0 +1,156 @@
+/* Global Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f7f6;
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/account-image.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.container {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    z-index: 1;
+}
+
+.form-container {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #34495e;
+}
+
+h3 {
+    margin: 2rem 0 1rem;
+    font-size: 1.2rem;
+    color: #2980b9;
+    text-align: left;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #888;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder {
+    color: #aaa;
+}
+
+/* Gender Selection */
+.gender-group {
+    justify-content: flex-start;
+}
+
+.gender-group label {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.radio-group {
+    margin-right: 20px;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    font-size: 0.9rem;
+}
+
+.checkbox-group a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218c54;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .form-container {
+        padding: 1rem;
+    }
+}
