@@ -10,26 +10,40 @@
 <body>
     <div class="container">
         <div class="form-container">
-            <h2>Register </h2>
-            <form action="<%= actionUrl %>" method="post">
+            <h2>Register</h2>
+            <form   id="registerForm"  "<%= actionUrl %>" method="post">
                 <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="fullName" placeholder="Full Name" required>
+                    <label for="name">
+                        <i class="fas fa-user"></i>
+                    </label>
+                    <input type="text" id="name" name="fullName" placeholder="Full Name" required>
                 </div>
                 <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="age">
+                        <i class="fas fa-calendar-alt"></i>
+                    </label>
+                    <input type="number" id="age" name="age" placeholder="Age" min="1" required>
                 </div>
                 <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-group">
-                    <i class="fas fa-phone"></i>
-                    <input type="tel" name="phoneNumber" placeholder="Phone Number" required>
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                    </label>
+                    <input type="password" id="password" name="password" placeholder="Password" required minlength="6">
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">
+                        <i class="fas fa-lock"></i>
+                    </label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required minlength="6">
                 </div>
                 <div class="checkbox-group">
-                    <input type="checkbox" name="terms" required>
+                    <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
                 </div>
                 <button type="submit">Create Account</button>
