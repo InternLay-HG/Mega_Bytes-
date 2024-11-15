@@ -15,22 +15,28 @@
 <body>
     <div class="container">
         <div class="login-box">
-            <div class="logo"><img src="./assets/interlay-logo.jpg" alt="" height="200px" width="200px"></div>
+            <div class="logo"><img src="./assets/interlay-logo.jpg" alt="Interlay Logo" height="200px" width="200px"></div>
             <h2>Login</h2>
             <!-- Correct the account page link -->
             <p class="account"><a href="account.html">Register</a></p>
             <form action="#">
+                <!-- Email Input Group -->
                 <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <i class="fas fa-envelope"></i> <!-- Envelope icon for email -->
+                    <label for="email"></label> <!-- Label associated with the email input -->
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
+                <!-- Password Input Group -->
                 <div class="input-group">
-                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-lock"></i> <!-- Lock icon for password -->
+                    <label for="password"></label> <!-- Label associated with the password input -->
                     <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
+                <!-- Forgot Password Link -->
                 <div class="forgot-password">
                     <a href="#">Forgot Password?</a>
                 </div>
+                <!-- Submit Button -->
                 <button type="submit" class="btn">Login</button>
             </form>
         </div>
