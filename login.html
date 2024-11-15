@@ -13,13 +13,18 @@
     <link rel="stylesheet" href="login-styles.css">
 </head>
 <body>
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/vide.mp4" type="video/mp4">
+        </video>
+      </div>
     <div class="container">
         <div class="login-box">
             <div class="logo"><img src="./assets/interlay-logo.jpg" alt="Interlay Logo" height="200px" width="200px"></div>
             <h2>Login</h2>
             <!-- Correct the account page link -->
             <p class="account"><a href="account.html">Register</a></p>
-            <form action="#">
+            <form id="loginForm" >
                 <!-- Email Input Group -->
                 <div class="input-group">
                     <i class="fas fa-envelope"></i> <!-- Envelope icon for email -->
