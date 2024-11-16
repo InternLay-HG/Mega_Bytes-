@@ -477,3 +477,8 @@ video {
     margin-top: 0; /* Remove any margin that could push the content down */
     padding-top: 0; /* Ensure no padding between video and content */
 }
+#logoo a{
+    align-items: center;
+    margin-right: 2px;
+   
+}
