@@ -17,6 +17,7 @@ body, html {
 }
 
 .container {
+    background-color: rgba(8, 8, 14, 0.132);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,21 +26,23 @@ body, html {
 }
 
 .login-box {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(8, 8, 14, 0.132);
     padding: 150px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 500px; /* Occupies 50% of the page */
+    width: 600px; /* Occupies 50% of the page */
     text-align: center;
 }
 
 h2 {
     margin-bottom: 25px;
-    font-size: 26px;
-    color: #333;
+    
+    font-size: 55px;
+    color:  #40E0D0;
 }
 
 .input-group {
+    width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -105,7 +108,12 @@ h2 {
 }
 .account{
     color: #007bff;
+
 }
+.account a{
+    color: #007bff ;
+}
+
 .account:hover{
     text-decoration: underline;
     cursor: pointer;
