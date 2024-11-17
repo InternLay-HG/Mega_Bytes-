@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", serif;
 }
 
 body, html {
@@ -481,4 +481,36 @@ video {
     align-items: center;
     margin-right: 2px;
    
+}
+/* General Button Styles */
+.btns {
+    display: inline-block;
+    background-color: #007bff; /* Primary blue color */
+    color: #ffffff; /* White text */
+    font-size: 16px; /* Text size */
+    font-weight: 600; /* Bold text */
+    padding: 10px 20px; /* Padding for the button */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover Effect */
+.btns:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+button{
+    border: none;
+}
+#second{
+   margin-top: 100px;
+   justify-content: space-between;
+   margin-left: 150px;
+   margin-right: 100px;
 }
