@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Care - Your Health Partner</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li class="icons"><a href="homepage.html">Home</a></li>
+                <li class="icons"><a href="about.html">About</a></li>
+                <li class="icons"><a href="services.html">Services</a></li>
+                <li class="icons"><a href="doctors.html">Doctors</a></li>
+                <li class="icons"><a href="contact.html">Contact</a></li>
+                <li class="icons"><button id="logoutButton">Logout</button></li>
+                <li class="icons"><button id="viewProfileBtn">View Profile</button></li>
+                
+                
+            
+                
+            </ul>
+        </nav>
+    </header>
+    <!-- bgc video -->
+    <section id="bgc-video">
+        <div>
+            <video autoplay loop muted playsinline id="background-video" height="100%" width="100%">
+                <source src="./video/bgvideo.mp4" type="video/mp4" >
+            </video>
+        </div>
+    </section>
+  <section class="info-cards" id="second">
+    <div class="card" id="pts">
+        <h1>Patient record Management</h3>
+        <button><a href="patient-record.html" id="ext" class="btns">Add Patient</a></button>
+    </div>
+    <div class="card"id="pts">
+        <h1>Appointment Scheduling</h1>
+        <button><a href="appointment.html" id="ext" class="btns">Schedule Appointment</a></button>
+    </div>
+    <div class="card"id="pts">
+        <h1>Medical History Tracking</h1>
+        <button><a href="medical-history.html" id="ext" class="btns">Add History</a></button>
+    </div>
+    <div class="card"id="pts">
+        <h1>Prescription Management</h1>
+        <button><a href="patient-prescription.html" id="ext" class="btns">Add Prescription</a></button>
+    </div>
+    <div class="card"id="pts">
+        <h1>Lab Results Integration</h1>
+        <button><a href="lab-result.html" id="ext" class="btns">Upload Lab Result</a></button>
+    </div>
+    <div class="card"id="pts">
+        <h1>Upload Prescription for OCR</h1>
+        <button><a href="ocr-section.html" id="ext" class="btns">Extract text</a></button>
+    </div>
+    <div class="card ai_ml"id="pts">
+        <h1>Disease Detection</h1>
+        <button><a href="https://hm12hm.streamlit.app/" id="ext" class="btns">Detect</a></button>
+    </div>
+  </section>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Your Most Trusted Health Partner</h2>
+            <p>Providing exceptional healthcare services and solutions to ensure your health and well-being.</p>
+            <a href="#" class="btn-primary">Make Appointment</a>
+        </div>
+    </section>
+
+    <!-- Info Cards Section -->
+    <section class="info-cards" second>
+        <div class="card">
+            <h3>Online Appointment</h3>
+            <p>24/7 appointment booking to help you get the best care at your convenience.</p>
+            <a href="#" class="btn-secondary" >Make Appointment</a>
+        </div>
+        <div class="card">
+            <h4>Timing schedule</h4>
+            <h3>Working hours</h3>
+            <ul>
+                <li>Sun - Wed 8:00 - 17:00</li>
+                <li>Thur - Fri 9:00 - 17:00</li>
+                <li>Sat - Sun 9:30 - 16:30</li>
+        </div>
+        <div class="card">
+            <h4>Emergency Classes</h4>
+            <h3>1-800-700-6200</h3>
+            <p>Get all time support for emergency.We have introduced the principle of family medicine.Get connect with us for any urgency.</p>
+            <a href="#" class="btn-secondary">Meet Our Doctors</a>
+        </div>
+    </section>
+
+    <!-- New Section: Healing Starts Here -->
+    <section class="healing-section" style="padding: 20px; background-color: #f9f9f9; border-radius: 8px; margin: 150px 120px;">
+        <div class="healing-text">
+            <div class="extra-logo"><img src="./images/interlay-logo.jpg" alt=""></div>
+            <h2 style="font-size: 24px; color: #333;">Why Choose Us</h2>
+            <ul style="list-style-type: none; padding: 0; line-height: 1.6;">
+                <li><strong style="color: #007bff;">Expert Team:</strong> Our healthcare professionals are highly qualified and experienced, dedicated to delivering exceptional patient care.</li>
+                <li><strong style="color: #007bff;">Comprehensive Services:</strong> We offer a wide range of services, from preventive care to specialized treatments, ensuring that all your healthcare needs are met under one roof.</li>
+                <li><strong style="color: #007bff;">Patient-Centered Care:</strong> We prioritize our patients by developing personalized treatment plans and providing attentive support throughout your healthcare journey.</li>
+                <li><strong style="color: #007bff;">State-of-the-Art Facilities:</strong> Our advanced technology and modern facilities enhance the quality of care, ensuring you receive the best possible treatment.</li>
+                <li><strong style="color: #007bff;">Accessibility:</strong> We provide convenient appointment scheduling, telehealth options, and easily accessible locations to accommodate diverse patient needs.</li>
+            </ul>
+        </div>
+        <div class="healing-image" style="margin-top: 20px;">
+            <img src="./images/imgae2.jpg" alt="Doctor and patient" style="max-width: 100%; border-radius: 8px;">
+        </div>
+    </section>
+
+    <section class="top-searched-specialties">
+        <h2>Top-searched Specialties</h2>
+        <div class="specialties-container">
+            <div class="specialty">
+                <i class="fas fa-user-md"></i>
+                <p>Primary Care</p>
+            </div>
+            <div class="specialty">
+                <i class="fas fa-tooth"></i>
+                <p>Dentist</p>
+            </div>
+            <div class="specialty">
+                <i class="fas fa-female"></i>
+                <p>OB-GYN</p>
+            </div>
+            <div class="specialty">
+                <i class="fas fa-heartbeat"></i>
+                <p>Cardiologist</p>
+            </div>
+            <div class="specialty">
+                <i class="fas fa-brain"></i>
+                <p>Psychiatrist</p>
+            </div>
+            <div class="specialty">
+                <i class="fas fa-eye"></i>
+                <p>Eye Doctor</p>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./js/appsec.js"></script>
+<script src="js/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Tech Landing Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General body styles */
+    body {
+      margin: 0;
+      overflow: hidden; /* Ensure no scrollbars appear */
+      background: #101820; /* Keep the original dark background */
+      font-family: 'Poppins', sans-serif; /* Clean, modern font */
+      color: #6092f6; /* Light text for readability */
+      text-align: center; /* Center-align everything */
+      transition: opacity 0.8s ease-in-out; /* Smooth fade-out transition */
+    }
+
+    /* Logo styles */
+    .logo-container {
+      position: absolute;
+      top: 20px; /* Positioned near the top */
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .logo-container img {
+      width: 200px; /* Logo size */
+      height: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .logo-container h2 {
+      font-size: 1.2rem; /* Adjust font size for app name */
+      font-weight: 600;
+      color: #00d4ff; /* Bright blue for text below the logo */
+      margin-top: 10px; /* Space between logo and text */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Glow effect for text */
+    }
+
+    /* Styling for the overlay */
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    /* Heading styles */
+    .overlay h1 {
+      font-size: 2.2rem; /* Refined font size */
+      font-weight: 700;
+      color: #00d4ff; /* Bright blue for contrast */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle glow effect */
+      margin-bottom: 20px;
+    }
+
+    /* Paragraph styles */
+    .overlay p {
+      font-size: 1.1rem; /* Balanced font size */
+      font-weight: 350;
+      color: #4daedf; /* Softer gray for readability */
+      line-height: 1.6; /* Improve spacing between lines */
+      margin-bottom: 30px; /* Space below the paragraph */
+    }
+
+    /* Button container */
+    .overlay nav {
+      margin-top: 20px;
+    }
+
+    /* Buttons styles */
+    .overlay button {
+      padding: 12px 30px;
+      margin: 10px; /* Space between buttons */
+      font-size: 1rem;
+      font-weight: bold;
+      color: #101820; /* Dark text on button */
+      background: linear-gradient(90deg, #00d4ff, #00ffcc); /* Gradient background */
+      border: none;
+      border-radius: 25px; /* Rounded edges */
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+
+    .overlay button:hover {
+      transform: scale(1.1); /* Zoom effect */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Slight shadow on hover */
+    }
+
+    /* Fade-out effect */
+    .fade-out {
+      opacity: 0; /* Fades the page out */
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo Container -->
+  <div class="logo-container">
+    <img src="./images/ourmedical.png" alt="App Logo">
+    <h2>Medical Tech</h2>
+  </div>
+
+  <!-- Overlay Section -->
+  <div class="overlay">
+    <h1>Welcome to the Healthcare System</h1>
+    <p>Innovative solutions for modern healthcare, making lives better through technology and smarter care.</p>
+    <nav>
+      <button onclick="navigateTo('login.html')">Login</button>
+      <button onclick="navigateTo('register.html')">Register</button>
+    </nav>
+  </div>
+
+  <!-- Include Three.js and script.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+  <script src="./js/index-script.js"></script>
+  <script>
+    function navigateTo(url) {
+      // Add the fade-out class for transition
+      document.body.classList.add('fade-out');
+      
+      // Delay navigation to allow fade-out animation to complete
+      setTimeout(() => {
+        window.location.href = url;
+      }, 800); // Match the duration of the fade-out effect (0.8s)
+    }
+  </script>
+</body>
+</html>

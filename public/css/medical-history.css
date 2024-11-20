@@ -1,0 +1,106 @@
+/* General Page Styles */
+body {
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+     background-image: url('../images/account-image.jpg'); /* Replace with your image path */
+     background-size: cover; /* Ensures the image covers the entire background */
+     background-repeat: no-repeat; /* Prevents the image from repeating */
+     background-position: center; /* Centers the background image */
+     height: 100vh; /* Ensures full viewport height */
+     display: flex;
+     justify-content: center;
+     align-items: flex-start; /* Align items at the top with some spacing */
+     padding-top: 50px; /* Adds space from the top */
+   }
+   
+   /* Medical History Section Styles */
+   #medicalHistory {
+     max-width: 800px;
+     width: 100%; /* Responsive width */
+     margin: 0 auto;
+     padding: 20px;
+     background-color: rgba(0, 0, 0, 0.212); /* Semi-transparent dark background */
+     color: #cbc4c4d9; /* White text for contrast */
+     border-radius: 8px; /* Rounded corners */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+   }
+   
+   /* Centered Heading */
+   #medicalHistory h2 {
+     text-align: center;
+     font-size: 24px;
+     color: #0e178e;
+     margin-bottom: 20px;
+   }
+   
+   /* Form Styling */
+   #addHistoryForm {
+     display: flex;
+     flex-direction: column;
+     gap: 15px; /* Spacing between inputs */
+   }
+   
+   #addHistoryForm input,
+   #addHistoryForm textarea {
+     padding: 10px;
+     font-size: 16px;
+     border: 1px solid #555; /* Slightly darker than background */
+     border-radius: 4px;
+     width: 100%;
+     box-sizing: border-box;
+     background-color: #eeeeee; /* Darker input background */
+     color: #000000; /* White text inside inputs */
+   }
+   
+   #addHistoryForm textarea {
+     resize: vertical; /* Allow vertical resizing */
+     height: 100px;
+   }
+   
+   #addHistoryForm button {
+     padding: 10px;
+     font-size: 16px;
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+   
+   #addHistoryForm button:hover {
+     background-color: #0056b3;
+   }
+   
+   /* History List */
+   #historyList {
+     margin-top: 20px;
+     padding: 10px;
+     background-color: #444; /* Match the form's input background */
+     border: 1px solid #555;
+     border-radius: 4px;
+     color: #fff;
+   }
+   
+   #historyList div {
+     padding: 10px;
+     border-bottom: 1px solid #555;
+   }
+   
+   #historyList div:last-child {
+     border-bottom: none;
+   }
+   
+   /* Responsive Design */
+   @media (max-width: 600px) {
+     #medicalHistory {
+       padding: 15px;
+     }
+   
+     #addHistoryForm button {
+       font-size: 14px;
+       padding: 8px;
+     }
+   }
+   

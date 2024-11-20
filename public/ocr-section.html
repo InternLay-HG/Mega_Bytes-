@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR Section</title>
+  <link rel="stylesheet" href="./css/ocr-section.css">
+</head>
+<body>
+  <section id="ocrSection">
+    <h2>Upload Prescription for OCR</h2>
+    <div id="fileUploadContainer">
+        <input type="file" id="ocrImageInput" accept="image/*" />
+        <button id="extractTextBtn">Extract Text</button>
+    </div>
+    <div id="resultContainer">
+        <p id="ocrResult">OCR result will be displayed here...</p>
+    </div>
+  </section>
+  <script src="./js/ocrScript.js"></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile</title>
+    <link rel="stylesheet" href="./css/profile-style.css"> <!-- Link to your CSS file if needed -->
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Profile</h1>
+        
+        <div class="profile-section">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> <span id="displayPatientName">Loading...</span></p>
+            <p><strong>Age:</strong> <span id="displayPatientAge">Loading...</span></p>
+            <p><strong>Contact Information:</strong> <span id="displayPatientContact">Loading...</span></p>
+            <p><strong>Phone Number:</strong> <span id="displayPatientPhone">Loading...</span></p>
+            <p><strong>Date of Birth:</strong> <span id="displayPatientDob">Loading...</span></p>
+            <p><strong>Gender:</strong> <span id="displayPatientGender">Loading...</span></p>
+            <p><strong>Current Medication:</strong> <span id="displayPatientMedication">Loading...</span></p>
+            <p><strong>Medical History:</strong> <span id="displayPatientHistory">Loading...</span></p>
+          </div>
+          
+
+        <div class="medical-history-section">
+            <h2>Medical History</h2>
+            <p id="patientMedicalHistory">Loading...</p>
+        </div>
+
+        <div class="appointments-section">
+            <h2>Appointments</h2>
+            <ul id="patientAppointments">Loading...</ul>
+            <p id="patientIdDisplay">Patient ID: </p>
+            <p id="doctorIdDisplay">Doctor ID: </p>
+        </div>
+
+        <div class="lab-reports-section">
+            <h2>Lab Reports</h2>
+            <ul id="patientLabReports">Loading...</ul>
+        </div>
+
+        
+    </div>
+    <script src="./js/profile.js"></script>
+    <script src="js/dashboard.js" defer></script>
+
+</body>
+</html>

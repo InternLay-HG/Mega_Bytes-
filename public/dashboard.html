@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Healthcare Dashboard</h1>
+    <button id="logoutButton">Logout</button>
+    <button id="viewProfileBtn">View Profile</button>
+
+  </header>
+
+  <section id="patientRecords">
+    <h2>Patient Record Management</h2>
+    <form id="addPatientForm">
+      <input type="text" id="patientName" placeholder="Full Name" required>
+      <input type="number" id="patientAge" placeholder="Age" required>
+      <input type="text" id="patientContact" placeholder="Contact Info" required>
+      <input type="tel" id="patientPhone" placeholder="Phone Number" required>
+      <input type="date" id="patientDob" placeholder="Date of Birth" required>
+      
+      <select id="patientGender" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      
+      <textarea id="patientCurrentMedication" placeholder="Current Medication (if any)"></textarea>
+      <textarea id="patientMedicalHistory" placeholder="Medical History"></textarea>
+      
+      <button type="submit">Add Patient</button>
+    </form>
+    <div id="patientList"></div>
+  </section>
+  
+
+  <section id="appointments">
+    <h2>Appointment Scheduling</h2>
+    <form id="addAppointmentForm">
+      <input type="text" id="appointmentPatientId" placeholder="Patient ID" required>
+      <input type="text" id="appointmentDoctorId" placeholder="Doctor ID" required>
+      <input type="datetime-local" id="appointmentDate" required>
+      <button type="submit">Schedule Appointment</button>
+    </form>
+    <div id="appointmentList"></div>
+  </section>
+
+  <section id="medicalHistory">
+    <h2>Medical History Tracking</h2>
+    <form id="addHistoryForm">
+      <input type="text" id="historyPatientId" placeholder="Patient ID" required>
+      <textarea id="medicalEvent" placeholder="Medical Event (e.g., Surgery, Diagnosis)"></textarea>
+      <button type="submit">Add History</button>
+    </form>
+    <div id="historyList"></div>
+  </section>
+
+  <section id="prescriptions">
+    <h2>Prescription Management</h2>
+    <form id="addPrescriptionForm">
+      <input type="text" id="prescriptionPatientId" placeholder="Patient ID" required>
+      <input type="text" id="medication" placeholder="Medication Name" required>
+      <input type="text" id="dosage" placeholder="Dosage" required>
+      <input type="text" id="frequency" placeholder="Frequency" required>
+      <button type="submit">Add Prescription</button>
+    </form>
+    <div id="prescriptionList"></div>
+    
+  </section>
+
+  <section id="labResults">
+    <h2>Lab Results Integration</h2>
+    <form id="addLabResultForm" enctype="multipart/form-data">
+      <input type="text" id="labPatientId" placeholder="Patient ID" required>
+      <input type="file" id="labResultFile" accept="application/pdf, image/*" required>
+      <button type="submit">Upload Lab Result</button>
+    </form>
+    <div id="labResultList"></div>
+  </section>
+
+  <section id="messaging">
+    <h2>Secure Messaging</h2>
+    <form id="sendMessageForm">
+      <input type="text" id="messageTo" placeholder="Recipient ID" required>
+      <textarea id="messageContent" placeholder="Message Content"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="messageList"></div>
+  </section>
+
+  <section id="reports">
+    <h2>Reporting and Analytics</h2>
+    <button id="generateReportButton">Generate Report</button>
+    <div id="reportContent"></div>
+  </section>
+
+  <section id="ocrSection">
+    <h2>Upload Prescription for OCR</h2>
+    <div id="fileUploadContainer">
+        <input type="file" id="ocrImageInput" accept="image/*" />
+        <button id="extractTextBtn">Extract Text</button>
+    </div>
+    <div id="resultContainer">
+        <p id="ocrResult">OCR result will be displayed here...</p>
+    </div>
+ </section>
+
+  
+</body>
+</html>

@@ -1,0 +1,541 @@
+/* Color Palette */
+:root {
+     --primary-color: #dc4559;
+     --secondary-color: #11acc7;
+     --accent-color: #3a0ca3;
+     --dark-color: #020516;
+     --light-color: #ddecf0;
+ }
+ 
+ /* General Styles */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Poppins", serif;
+ }
+ 
+ body, html {
+     width: 100%;
+     height: 100%;
+     overflow-x: hidden;
+     color: var(--dark-color);
+     background-color: var(--light-color);
+ }
+ 
+ header {
+     width: 100%;
+     padding: 1rem 2rem;
+     display: flex;
+     justify-content: flex-end;
+     background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+     position: fixed;
+     top: 0;
+     z-index: 10;
+ }
+ 
+ header nav ul {
+     display: flex;
+     list-style: none;
+     gap: 1.5rem;
+ }
+ 
+ header nav ul li a {
+     text-decoration: none;
+     color: var(--dark-color);
+     font-weight: 500;
+     padding: 0.5rem 1rem;
+     transition: color 0.3s;
+ }
+ header nav ul li button {
+    background-color: var(--light-color); /* Replace with your color variable or any color */
+    border: none;
+    padding: 0.5rem 1rem;
+    color: var(--dark-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+header nav ul li button:hover {
+    background-color: var(--primary-color); /* Replace with your hover color */
+    color: var(--light-color); /* Adjust for readability */
+}
+
+/* Arrange buttons and align them side by side */
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between elements */
+}
+ 
+ header nav ul li a:hover {
+     color: var(--primary-color);
+ }
+ 
+ #hero {
+     width: 100%;
+     height: 100vh;
+     /* background: var(--light-color) url('./assets/backgroung-image.jpg') no-repeat center center/cover; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     padding-top: 60px; /* Extra space for header */
+     color: var(--dark-color);
+ }
+ 
+ .hero-content h2 {
+     font-size: 3rem; /* Increase size as needed */
+     font-weight: 800; /* Make bolder */
+     font-family: 'Poppins', sans-serif;
+     color: var(--secondary-color);
+     margin-bottom: 0.5rem;
+     text-align: center;
+ }
+ 
+ 
+ .hero-content p {
+     font-size: 1.5rem;
+     margin-bottom: 1rem;
+     max-width: 600px;
+     color: var(--dark-color);
+     font-style: italic;
+ 
+ }
+ 
+ .btn-primary {
+     padding: 0.75rem 1.5rem;
+     background-color: var(--primary-color);
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background 0.3s;
+ }
+ 
+ .btn-primary:hover {
+     background-color: var(--accent-color);
+ }
+ 
+ .info-cards {
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+     margin-top: -7rem;
+     flex-wrap: wrap;
+     max-width: 1200px;
+     padding: 0;
+ }
+ 
+ .info-cards .card {
+     background-color: #fff;
+     color: var(--dark-color);
+     padding: 1.5rem;
+     width: 300px;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     transition: transform 0.3s, box-shadow 0.3s;
+ }
+ 
+ .info-cards .card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .info-cards .card h3 {
+     font-size: 1.5rem;
+     margin-bottom: 0.5rem;
+     color: var(--primary-color);
+ }
+ 
+ .info-cards .card p, .info-cards .card ul li {
+     color: var(--dark-color);
+     font-size: 1rem;
+ }
+ 
+ .info-cards .card ul {
+     list-style: none;
+     padding: 0;
+     color: var(--dark-color);
+     font-size: 0.9rem;
+     text-align: left;
+     margin-top: 0.5rem;
+ }
+ 
+ .info-cards .card ul li {
+     padding: 0.2rem 0;
+     position: relative;
+     padding-left: 1.2rem;
+ }
+ 
+ .info-cards .card ul li::before {
+     content: "•";
+     color: var(--primary-color);
+     position: absolute;
+     left: 0;
+ }
+ 
+ .btn-secondary {
+     display: inline-block;
+     padding: 0.5rem 1rem;
+     margin-top: 1rem;
+     background-color: var(--accent-color);
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     text-decoration: none;
+     transition: background 0.3s;
+ }
+ 
+ .btn-secondary:hover {
+     background-color: var(--secondary-color);
+ }
+ 
+ @media (max-width: 768px) {
+     .info-cards {
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     .hero-content h2 {
+         font-size: 2rem;
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     .hero-content h2 {
+         font-size: 1.8rem;
+     }
+ 
+     .hero-content p {
+         font-size: 1rem;
+     }
+ }
+ /* Login and Create Account Buttons */
+ header nav ul li .login-btn,
+ header nav ul li .create-btn {
+     padding: 0.5rem 1rem;
+     color: #121212;
+     border-radius: 5px;
+     text-decoration: none;
+     transition: background-color 0.3s;
+ }
+ /* Healing Section */
+ .healing-section {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     max-width: 1200px;
+     margin: 3rem auto;
+     padding: 2rem;
+     gap: 2rem;
+ }
+ 
+ .healing-text {
+     flex: 1;
+     max-width: 600px;
+ }
+ 
+ .healing-text h2 {
+     font-size: 2.5rem;
+     color: var(--primary-color);
+     margin-bottom: 1rem;
+ }
+ 
+ .healing-text p {
+     font-size: 1rem;
+     color: var(--dark-color);
+     margin-bottom: 1rem;
+ }
+ 
+ .healing-text a {
+     display: inline-block;
+     padding: 0.5rem 1rem;
+     background-color: var(--secondary-color);
+     color: #fff;
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background-color 0.3s;
+ }
+ 
+ .healing-text a:hover {
+     background-color: var(--primary-color);
+ }
+ 
+ .healing-image {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .healing-image img {
+     width: 100%;
+     border-radius: 8px;
+     object-fit: cover;
+     max-width: 800px;
+ }
+ 
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+     .healing-section {
+         flex-direction: column;
+         text-align: center;
+     }
+     
+     .healing-image {
+         margin-top: 1.5rem;
+     }
+ 
+     .healing-text h2 {
+         font-size: 2rem;
+     }
+ }
+ 
+ .top-searched-specialties {
+     text-align: center;
+     padding: 2rem 1rem;
+     background-color: #f8f8f8;
+ }
+ 
+ .top-searched-specialties h2 {
+     font-size: 2rem;
+     color: var(--primary-color);
+     margin-bottom: 1.5rem;
+ }
+ 
+ .specialties-container {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 1rem;
+ }
+ 
+ .specialty {
+     background-color: #fcf4e9;
+     width: 140px;
+     padding: 1rem;
+     border-radius: 8px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     transition: transform 0.3s;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .specialty:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .specialty i {
+     font-size: 2rem;
+     color: var(--secondary-color);
+     margin-bottom: 0.5rem;
+ }
+ 
+ .specialty p {
+     font-size: 1rem;
+     color: var(--dark-color);
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+     .specialties-container {
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+ 
+ /* Logo Styling */
+ .logo {
+     display: flex;
+     align-items: center;
+     margin-right: auto;
+ }
+ 
+ .logo-image {
+     width: 50px; /* Adjust size as needed */
+     height: auto;
+ }
+ 
+ /* Header Navigation Adjustment */
+ header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: #ffffff; /* Solid background for contrast */
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ header nav ul {
+     display: flex;
+     list-style: none;
+     gap: 1.5rem;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ header nav ul li a {
+     color: var(--dark-color);
+     text-decoration: none;
+     padding: 0.5rem 1rem;
+     font-weight: 600;
+ }
+ 
+ header nav ul li a:hover {
+     color: var(--primary-color);
+     background-color: var(--light-color);
+     border-radius: 5px;
+ }
+ 
+ /* Header Styling */
+ header {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: 70px; /* Define header height */
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 0 2rem;
+     z-index: 10; /* Ensures header stays above other content */
+ }
+ 
+ /* Ensure Main Content Starts Below Header */
+ #hero {
+     width: 100%;
+     height: calc(100vh - 70px); /* Adjust height to exclude header */
+     /* background: var(--light-color) url('./assets/backgroung-image.jpg') no-repeat center center/cover; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     margin-top: 70px; /* Offset to start below header */
+     color: var(--dark-color);
+ }
+ .top-searched-specialties {
+     text-align: center;
+     padding: 2rem 1rem;
+     background-color: #f8f8f8;
+ }
+ 
+ .top-searched-specialties h2 {
+     font-size: 2rem;
+     color: var(--primary-color);
+     margin-bottom: 1.5rem;
+ }
+ 
+ .specialties-container {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 1rem;
+ }
+ 
+ .specialty {
+     background-color: #fcf4e9;
+     width: 140px;
+     padding: 1rem;
+     border-radius: 8px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     transition: transform 0.3s;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .specialty:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .specialty i {
+     font-size: 2rem;
+     color: var(--secondary-color);
+     margin-bottom: 0.5rem;
+ }
+ 
+ .specialty p {
+     font-size: 1rem;
+     color: var(--dark-color);
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+     .specialties-container {
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+ header nav ul a{
+    display: flex;
+     margin: 50px;
+ }
+ .some{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 2%;
+ }
+ /* Remove space between video and content */
+ video {
+     display: block; /* Makes the video behave as a block element */
+     margin: 0; /* Remove any default margin */
+     padding: 0; /* Remove any default padding */
+ }
+ 
+ #hero {
+     margin-top: 0; /* Remove any margin that could push the content down */
+     padding-top: 0; /* Ensure no padding between video and content */
+ }
+ #logoo a{
+     align-items: center;
+     margin-right: 2px;
+    
+ }
+ /* General Button Styles */
+ .btns {
+     display: inline-block;
+     background-color: #007bff; /* Primary blue color */
+     color: #ffffff; /* White text */
+     font-size: 16px; /* Text size */
+     font-weight: 600; /* Bold text */
+     padding: 10px 20px; /* Padding for the button */
+     text-decoration: none; /* Remove underline */
+     border: none; /* Remove border */
+     outline: none; /* Remove outline */
+     border-radius: 8px; /* Rounded corners */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+     cursor: pointer; /* Pointer cursor */
+ }
+ 
+ /* Hover Effect */
+ .btns:hover {
+     background-color: #0056b3; /* Darker blue on hover */
+     transform: translateY(-2px); /* Slight lift */
+     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+ }
+ button{
+     border: none;
+ }
+ #second{
+    margin-top: 100px;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 100px;
+ }
+ .ai_ml{
+     margin-left: 38%;
+ }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical History Tracking</title>
+  <link rel="stylesheet" href="./css/medical-history.css">
+</head>
+<body>
+  <section id="medicalHistory">
+    <h2>Medical History Tracking</h2>
+    <form id="addHistoryForm">
+      <input type="text" id="historyPatientId" placeholder="Patient ID" required>
+      <textarea id="medicalEvent" placeholder="Medical Event (e.g., Surgery, Diagnosis)"></textarea>
+      <button type="submit">Add History</button>
+    </form>
+    <div id="historyList"></div>
+    
+  </section>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* General Page Styles */
+body {
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+     background-image: url('../images/account-image.jpg'); /* Replace with your image */
+     background-size: cover; /* Cover the entire viewport */
+     background-repeat: no-repeat; /* No repetition of the image */
+     background-position: center; /* Center the background image */
+     height: 100vh; /* Full viewport height */
+     display: flex;
+     justify-content: center;
+     align-items: flex-start; /* Align container to the top */
+     padding: 20px 0; /* Reduce top and bottom padding */
+}
+
+/* OCR Section Styles */
+#ocrSection {
+     max-width: 600px;
+     width: 100%;
+     padding: 20px;
+     background-color: rgba(0, 0, 0, 0.2); /* Glassy black with transparency */
+     color: #000; /* Black text for better readability */
+     border-radius: 8px; /* Rounded corners */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+     text-align: center;
+     backdrop-filter: blur(10px); /* Creates a glassy effect */
+     margin-top: 10%; /* Adjust this value to move the container up or down */
+}
+
+/* Section Title */
+#ocrSection h2 {
+     margin-bottom: 20px;
+     font-size: 27px;
+     color: #15106c;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* File Upload Container */
+#fileUploadContainer {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 15px;
+     margin-bottom: 20px;
+}
+
+#fileUploadContainer input[type="file"] {
+     padding: 10px;
+     font-size: 14px;
+     background-color: #fff; /* White background for input */
+     color: #000; /* Black text inside input */
+     border: 1px solid #ccc; /* Light gray border for input */
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+#fileUploadContainer button {
+     padding: 10px 20px;
+     font-size: 16px;
+     background-color: #007bff; /* Primary blue button */
+     color: #fff;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+}
+
+#fileUploadContainer button:hover {
+     background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* OCR Result Container */
+#resultContainer {
+     padding: 20px; /* Increased padding for more space inside */
+     background-color: #f4f4f4; /* Light gray background for result container */
+     color: #333; /* Darker text color for better contrast */
+     border-radius: 8px; /* Slightly rounded corners for a modern look */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer, more subtle shadow */
+     margin-top: 20px; /* Space above the result container */
+     white-space: pre-wrap; /* Ensure line breaks are respected */
+     word-wrap: break-word; /* Break long words to fit inside container */
+ }
+ 
+ /* OCR Result Text */
+ #ocrResult {
+     font-size: 18px; /* Larger font size for better readability */
+     color: #000; /* Black text for the result */
+     margin: 0;
+     text-align: left; /* Align text for better readability */
+     line-height: 1.6; /* Increased line height for readability */
+     font-family: 'Courier New', Courier, monospace; /* Monospace font for OCR text */
+     letter-spacing: 0.5px; /* Slight letter spacing for clarity */
+     background-color: #fff; /* White background for the text */
+     padding: 10px; /* Add padding inside the result block */
+     border-radius: 4px; /* Rounded corners for the text block */
+     border: 1px solid #ddd; /* Light border around the text */
+     overflow-wrap: break-word; /* Ensure long words break onto the next line */
+ }
+ 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+     #ocrSection {
+          padding: 15px;
+     }
+
+     #fileUploadContainer button {
+          font-size: 14px;
+          padding: 8px 15px;
+     }
+
+     #ocrResult {
+          font-size: 14px;
+     }
+}
